@@ -26,7 +26,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Murder She Drank</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,7 +78,8 @@
     <!-- // Hero -->
 
     <!-- Episodes -->
-    <section class="episodes" id="episodes">
+    <div id="episodes" class="jump"></div>
+    <section class="episodes">
       <h2>Episodes for December 18th</h2>
       <h3>Friday, 8pm Central / 6pm Pacific</h3>
       <p>Join us for mullets and incompetent law enforcement. Participate by following our <a href="https://twitter.com/MurderSheDrank">live tweets</a> of the shows. Join in on the action by tagging your <a href="https://twitter.com/hashtag/MurderSheDrank?src=hash">tweets</a> with <a href="https://instagram.com/explore/tags/murdershedrank/">#MurderSheDrank</a> and play along with our free bingo cards. This Friday we are watching:</p>
@@ -140,7 +141,8 @@
     <!-- // Episodes -->
 
     <!-- Bingo -->
-    <section class="bingo" id="bingo">
+    <div id="bingo" class="jump"></div>
+    <section class="bingo">
       <h2>Download Free Bingo Cards</h2>
       <p>Each PDF has several unique cards. All cards have an ID on the bottom so you and your friends can choose similar or different cards.</p>
 
@@ -168,7 +170,8 @@
     <!-- // Bingo -->
 
     <!-- FAQ -->
-    <section class="faq" id="faq">
+    <div id="faq" class="jump"></div>
+    <section class="faq">
       <h2>FAQs</h2>
       <h3 style="margin-top: 0;">How do I play?</h3>
       <p>Easily, you don't even need to play along with us; you can do it on your own time.
@@ -200,7 +203,8 @@
     </section>
 
     <!-- About -->
-    <section class="about" id="about">
+    <div id="about" class="jump"></div>
+    <section class="about">
       <h2>About your murder bosses</h2>
       <div class="row">
         <div class="col-sm-7">
@@ -230,6 +234,21 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+    $('#navbarResponsive a').click(function () {
+      $('#navbarResponsive a.active').removeClass('active');
+      $(this).addClass('active');
+    });
+    $(window).scroll(function () {
+        var href = $(this).scrollTop();
+        $('.link').each(function (event) {
+            if (href >= $($(this).attr('href')).offset().top - 1) {
+                $('#navbarResponsive a.active').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+    });
+  </script>
 
 </body>
 

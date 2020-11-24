@@ -43,7 +43,7 @@ a {
 	/*background-size: cover;*/
 }
 
-.navbar-brand {
+.navbar-brand, .navbar-dark .navbar-nav .nav-link {
 	color: white; /*#EEE8AA*/
 	font-family: 'Special Elite', cursive;
 	text-decoration: none;
@@ -54,9 +54,18 @@ a {
 	text-decoration: none;
 }
 
-.navbar a:hover {
-	color: white;
+.navbar a:hover, #navbarResponsive a.active {
+	color: #e5e5e5;
 	text-decoration: underline;
+}
+
+.jump::before {
+    display: block;
+    content: " ";
+    margin-top: -50px;
+    height: 50px;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 /*
@@ -121,6 +130,37 @@ footer a {
     display: inline-block;
     margin-right: 1em;
     font-size: 180%;
+}
+
+/*
+ * Instagram Link Tree
+ */
+
+body.insta {
+	padding-top: 20px;
+}
+
+.insta .logo {
+	display: block;
+	max-width: 125px;
+	padding-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.insta h2 {
+    font-size: 1.2rem;
+    padding-bottom: 0;
+  }
+
+.insta a.btn-mid {
+	color: white;
+	background-color: #2f140d;
+	text-decoration: none;
+}
+
+.insta a.btn-dark {
+	text-decoration: none;
 }
 
 

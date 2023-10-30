@@ -34,7 +34,11 @@ p {
 
 a {
 	color: #432b25;
-	text-decoration: underline;
+	text-decoration: underline!important;
+}
+
+a:visted {
+	text-decoration: underline!important;
 }
 
 .navbar	{
